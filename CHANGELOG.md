@@ -1,3 +1,8 @@
+## <small>0.0.3 (2026-11-07)</small>
+
+* Dummit commit to test changelog ([492807b](https://github.com/sepo27/comly/commit/492807b))
+* Fix changelog ([4fcc8e1](https://github.com/sepo27/comly/commit/4fcc8e1))
+
 ## <small>0.0.1 (2026-11-07)</small>
 
 * Fix NodeJS version (v26.13.0) ([5213146](https://github.com/sepo27/comly/commit/5213146))
