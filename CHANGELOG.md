@@ -1,0 +1,10 @@
+## 0.0.0 (2026-11-07)
+
+* Fix NodeJS version (v26.13.0) ([5213146](https://github.com/sepo27/comly/commit/5213146))
+* Init Eslint ([d2d2bd4](https://github.com/sepo27/comly/commit/d2d2bd4))
+* Init gitignore ([c6c8f55](https://github.com/sepo27/comly/commit/c6c8f55))
+* Init package.json & pnpm ([3304d01](https://github.com/sepo27/comly/commit/3304d01))
+* Init README ([1b4dddc](https://github.com/sepo27/comly/commit/1b4dddc))
+* Init tsconfig ([ba4c355](https://github.com/sepo27/comly/commit/ba4c355))
+* Install Typescript ([a47ce30](https://github.com/sepo27/comly/commit/a47ce30))
+* Setup precommit hooks ([3021090](https://github.com/sepo27/comly/commit/3021090))
