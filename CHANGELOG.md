@@ -1,3 +1,5 @@
+## 0.1.0 (2026-11-07)
+
 ## <small>0.0.3 (2026-11-07)</small>
 
 * Dummit commit to test changelog ([492807b](https://github.com/sepo27/comly/commit/492807b))
