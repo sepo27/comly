@@ -4,7 +4,8 @@
     "target": "es6",
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "types": ["node"]
   },
   "include": ["./src"],
   "exclude": [
