@@ -10,4 +10,4 @@
 .sandbox
 npm-debug.log*
 node_modules
-/bin
+/dist
