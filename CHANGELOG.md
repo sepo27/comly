@@ -1,3 +1,5 @@
+## <small>0.0.2 (2026-11-07)</small>
+
 ## <small>0.0.1 (2026-11-07)</small>
 
 * Fix NodeJS version (v26.13.0) ([5213146](https://github.com/sepo27/comly/commit/5213146))
