@@ -1,0 +1,20 @@
+{
+  "name": "Comly",
+  "description": "Command Line Framework",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": ["CLI", "Command Line Framework"],
+  "author": "Sergey Poskachey",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.18.0"
+}
