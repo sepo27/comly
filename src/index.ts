@@ -1,3 +1,3 @@
-console.log('=== Index');
+import { Comly } from './Comly';
 
-// Dummy comment
+export { Comly };
