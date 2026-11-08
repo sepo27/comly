@@ -1,10 +1,10 @@
 import { comly } from './main/core/comly.js';
 import { ComlyCommand } from './main/core/ComlyCommand.js';
-import { CsvOption } from './main/opts/CsvOption.js';
-import { VerboseOption } from './main/opts/VerboseOption.js';
+import type { ComlyCommandOpts } from './main/core/types.js';
 
 // Core exports
 export { comly, ComlyCommand };
+export type { ComlyCommandOpts };
 
 // Kit exports
-export { CsvOption, VerboseOption };
+export * from './main/opts/index.js';
