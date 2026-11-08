@@ -1,6 +1,6 @@
 import { Option } from 'commander';
 
-export class VerboseOpt extends Option {
+export class VerboseOption extends Option {
   constructor() {
     super('-v,--verbose', 'Verbose (useful with Nodelog)');
     this.default(0);
