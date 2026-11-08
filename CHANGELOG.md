@@ -1,3 +1,9 @@
+## 0.5.0 (2026-11-08)
+
+* Export common options ([87425fa](https://github.com/sepo27/comly/commit/87425fa))
+* Rename verbose option ([b777de1](https://github.com/sepo27/comly/commit/b777de1))
+* Add csv option ([d078b4f](https://github.com/sepo27/comly/commit/d078b4f))
+
 ## 0.4.0 (2026-11-08)
 
 * Implement debuggable action errors ([b2b4efe](https://github.com/sepo27/comly/commit/b2b4efe))
