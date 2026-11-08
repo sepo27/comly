@@ -1,3 +1,7 @@
+## 0.4.0 (2026-11-08)
+
+* Implement debuggable action errors ([b2b4efe](https://github.com/sepo27/comly/commit/b2b4efe))
+
 ## 0.3.0 (2026-11-08)
 
 * Introduce action logger ([fd4e131](https://github.com/sepo27/comly/commit/fd4e131))
