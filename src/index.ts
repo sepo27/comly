@@ -1,3 +1,4 @@
 import { Comly } from './Comly';
+import { comlyInstance } from './comlyInstance';
 
-export { Comly };
+export { Comly, comlyInstance };
