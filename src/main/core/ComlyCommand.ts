@@ -1,8 +1,8 @@
 import { Command, ParseOptionsResult } from 'commander';
-import { Nodelog } from '../../lib/Nodelog.ts';
-import { CommandAction } from '../types.ts';
-import { VerboseOption } from '../opts/VerboseOption.ts';
-import { ComlyCommandOpts } from './types.ts';
+import { Nodelog } from '../../lib/Nodelog.js';
+import { CommandAction } from '../types.js';
+import { VerboseOption } from '../opts/VerboseOption.js';
+import { ComlyCommandOpts } from './types.js';
 
 export class ComlyCommand extends Command {
   constructor(name?: string) {
