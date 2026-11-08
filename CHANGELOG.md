@@ -1,3 +1,19 @@
+## 0.2.0 (2026-11-08)
+
+* Add commander peer dependency ([ce5f384](https://github.com/sepo27/comly/commit/ce5f384))
+* Add types to npm package ([7efdc5f](https://github.com/sepo27/comly/commit/7efdc5f))
+* Drop .js ([806a12d](https://github.com/sepo27/comly/commit/806a12d))
+* Exclude .sandbox from eslint ([2b9abac](https://github.com/sepo27/comly/commit/2b9abac))
+* Fix TS setup ([4902b53](https://github.com/sepo27/comly/commit/4902b53))
+* Introduce comlyInstance() ([8c8c69f](https://github.com/sepo27/comly/commit/8c8c69f))
+* Prepare basic npm package ([4a41ebd](https://github.com/sepo27/comly/commit/4a41ebd))
+* Prepare npm package for consuming ([7a6e39b](https://github.com/sepo27/comly/commit/7a6e39b))
+* Rename npm package ([3ff6725](https://github.com/sepo27/comly/commit/3ff6725))
+* Reorg package.json ([2ad8a21](https://github.com/sepo27/comly/commit/2ad8a21))
+* Setup basic app runner ([db68da2](https://github.com/sepo27/comly/commit/db68da2))
+* Setup npm bin ([bdffbfd](https://github.com/sepo27/comly/commit/bdffbfd))
+* Update index ([6c7a513](https://github.com/sepo27/comly/commit/6c7a513))
+
 ## 0.1.0 (2026-11-07)
 
 ## <small>0.0.3 (2026-11-07)</small>
