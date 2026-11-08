@@ -1,3 +1,8 @@
+## 0.3.0 (2026-11-08)
+
+* Introduce action logger ([fd4e131](https://github.com/sepo27/comly/commit/fd4e131))
+* Drop dummy commit ([a12d08c](https://github.com/sepo27/comly/commit/a12d08c))
+
 ## <small>0.2.1 (2026-11-08)</small>
 
 * B dummy commit to test changelog ([b780791](https://github.com/sepo27/comly/commit/b780791))
