@@ -1,3 +1,8 @@
+## 0.6.0 (2026-11-08)
+
+* Reorg core index ([decbe98](https://github.com/sepo27/comly/commit/decbe98))
+* Update README ([92e1b13](https://github.com/sepo27/comly/commit/92e1b13))
+
 ## 0.5.0 (2026-11-08)
 
 * Export common options ([87425fa](https://github.com/sepo27/comly/commit/87425fa))
