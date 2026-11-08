@@ -10,6 +10,8 @@ Command Line Interface Framework.
 ### Features:
 - Logger & verbosity by default
 - Debuggable pretty errors
+- Handy CLI kit
+  - Common options
 - CLI bin setup
 
 # Quick Start
