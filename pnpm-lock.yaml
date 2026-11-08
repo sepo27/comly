@@ -226,6 +226,12 @@ importers:
         specifier: ^5.8.2
         version: 5.9.3
 
+  .sandbox/cli-npm:
+    dependencies:
+      comly:
+        specifier: workspace:*
+        version: link:../..
+
 packages:
 
   '@cacheable/memory@2.2.0':
