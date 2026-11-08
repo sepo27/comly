@@ -9,6 +9,10 @@
     "build": "tsc -p ./tsconfig.build.json",
     "lint": "eslint ./src",
     "typecheck": "tsc --noEmit",
+    "bin-cli:Lint": "eslint ./binCli/src -c ./eslint.config.js",
+    "bin-cli:typecheck": "tsc --noEmit",
+    "bin-cli": "tsx ./binCli/src",
+
     "prepare": "husky && pnpm run build",
     "version": "conventional-changelog -i CHANGELOG.md -s -n .versionrc.js && git add CHANGELOG.md"
   },
