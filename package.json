@@ -4,11 +4,6 @@
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/index.js",
-  "files": [
-    "dist/",
-    "README.md",
-    "CHANGELOG.md"
-  ],
   "scripts": {
     "build": "tsc -p ./tsconfig.build.json",
     "lint": "eslint ./src",
@@ -16,21 +11,20 @@
     "prepare": "husky && pnpm run build",
     "version": "conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
-  "keywords": [
-    "CLI",
-    "Command Line Framework"
+  "files": [
+    "dist/",
+    "README.md",
+    "CHANGELOG.md"
   ],
-  "author": "Sergey Poskachey",
-  "license": "ISC",
+  "peerDependencies": {
+    "commander": "^15.0.0"
+  },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
       "version": "12.18.0",
       "onFail": "download"
     }
-  },
-  "peerDependencies": {
-    "commander": "^15.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -43,5 +37,11 @@
     "husky": "^9.0.0",
     "tsx": "^4.23.15",
     "typescript": "^5.8.2"
-  }
+  },
+  "keywords": [
+    "CLI",
+    "Command Line Framework"
+  ],
+  "author": "Sergey Poskachey",
+  "license": "ISC"
 }
