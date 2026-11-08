@@ -1,3 +1,7 @@
+## <small>0.6.1 (2026-11-08)</small>
+
+* Fix sub-commands options problem ([49ea0ca](https://github.com/sepo27/comly/commit/49ea0ca))
+
 ## 0.6.0 (2026-11-08)
 
 * Reorg core index ([decbe98](https://github.com/sepo27/comly/commit/decbe98))
