@@ -1,3 +1,9 @@
+## <small>0.2.1 (2026-11-08)</small>
+
+* B dummy commit to test changelog ([b780791](https://github.com/sepo27/comly/commit/b780791))
+* A dummy commit to test changelog ([22a8205](https://github.com/sepo27/comly/commit/22a8205))
+* Improve chnagelog to sort commits by dates DESC ([d06a3e8](https://github.com/sepo27/comly/commit/d06a3e8))
+
 ## 0.2.0 (2026-11-08)
 
 * Add commander peer dependency ([ce5f384](https://github.com/sepo27/comly/commit/ce5f384))
