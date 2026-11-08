@@ -11,7 +11,7 @@
     "lint": "eslint ./src",
     "typecheck": "tsc --noEmit",
     "prepare": "husky && pnpm run build",
-    "version": "conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md"
+    "version": "conventional-changelog -i CHANGELOG.md -s -n .versionrc.js && git add CHANGELOG.md"
   },
   "files": [
     "dist/",
