@@ -1,4 +1,4 @@
-import { Command } from 'commander';
+import { Command, ParseOptionsResult } from 'commander';
 import { Nodelog } from '../../lib/Nodelog.js';
 import { CommandAction } from '../types.js';
 import { VerboseOption } from '../opts/VerboseOption.js';
@@ -18,6 +18,19 @@ export class ComlyCommand extends Command {
   public action(fn: CommandAction<this>): this {
     super.action(makeActionWrap(fn).bind(this));
     return this;
+  }
+
+  /**
+   * Overwrite to fix problem with options applied to both parent and child.
+   * TODO: This fix needs to be proven.
+   *
+   * @param argv
+   */
+  public parseOptions(argv: string[]): ParseOptionsResult {
+    const res = super.parseOptions(argv);
+    // @ts-ignore
+    this._optionValues = { ...this._optionValues, ...this.parent._optionValues };
+    return res;
   }
 }
 
