@@ -28,7 +28,12 @@ function makeActionWrap(action: CommandAction<typeof this>): CommandAction<Comly
     const commonOpts = this.opts<ComlyCommandOpts>();
     this.log.setVerbosityLevel(commonOpts.verbose);
 
-    await action.call(this, args);
+    try {
+      await action.call(this, args);
+    } catch (err) {
+      this.log.error(err.message);
+      this.log.debug(err.stack);
+    }
   }
   return actionWrap;
 }
