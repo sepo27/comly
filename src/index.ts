@@ -1,4 +1,4 @@
-import { Comly } from './Comly';
-import { comlyInstance } from './comlyInstance';
+import { Comly } from './Comly.js';
+import { comlyInstance } from './comlyInstance.js';
 
 export { Comly, comlyInstance };

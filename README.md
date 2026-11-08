@@ -1,3 +1,41 @@
+# Status
+
+**! Development pre-release phase. !**
+
 # Purpose
 
-Command Line Interface Framework.
+Command Line Interface Framework.  
+*(Based on [commander](https://www.npmjs.com/package/commander))*
+
+Features:
+- CLI app runner
+- CLI bin setup
+
+# Quick Start
+
+Install
+```shell
+pnpm install <local-path-to-comly>
+```
+
+Setup CLI app
+
+```typescript
+// src/index.ts
+
+import { comlyInstance } from 'comly';
+import { createCommand } from 'commander';
+
+const fooCommand = createCommand('foo');
+
+comlyInstance().addCommand(fooCommand).run();
+```
+
+Setup TS compiler & CLI bin
+```shell
+pnpm install typescript -D
+
+# Configure tsconfig.json to output into ./dist
+
+pnpm comly # This will setup comly bin into ./cli
+```

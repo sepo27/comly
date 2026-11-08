@@ -5,6 +5,7 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": "./bin/comly-bin.sh",
   "scripts": {
     "build": "tsc -p ./tsconfig.build.json",
     "lint": "eslint ./src",
@@ -14,6 +15,7 @@
   },
   "files": [
     "dist/",
+    "bin/",
     "README.md",
     "CHANGELOG.md"
   ],
