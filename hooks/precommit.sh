@@ -31,6 +31,10 @@ grepSrcFiles() {
   grepFiles "^src/.*\.($1)$"
 }
 
+grepBinCliFiles() {
+  grepFiles "^binCli/.*\.($1)$"
+}
+
 ### Main ###
 
 # Lint
@@ -46,5 +50,21 @@ fi
 if [[ `grepSrcFiles "tsx?"` ]]; then
   infom "Type checking src ... "
   pnpm run --silent typecheck || exit 1
+  println "🮱"
+fi
+
+# Lint bin CLI
+
+if [[ `grepBinCliFiles "tsx?"` ]]; then
+  infom "Linting bin CLI ... "
+  pnpm run --silent bin-cli:Lint --quiet `grepBinCliFiles "ts"` || exit 1
+  println "🮱"
+fi
+
+# Type check bin CLI
+
+if [[ `grepBinCliFiles "tsx?"` ]]; then
+  infom "Type checking bin CLI ... "
+  pnpm run --silent bin-cli:typecheck || exit 1
   println "🮱"
 fi
