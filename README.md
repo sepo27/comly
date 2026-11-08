@@ -16,22 +16,20 @@ Command Line Interface Framework.
 
 # Quick Start
 
-Install
+Install (TODO: publish)
 ```shell
 pnpm install <local-path-to-comly>
 ```
 
 Setup CLI app
-
 ```typescript
 // src/index.ts
 
-import { comlyInstance } from 'comly';
-import { createCommand } from 'commander';
+import { comly, ComlyCommand } from 'comly';
 
-const fooCommand = createCommand('foo');
+const fooCommand = ComlyCommand('foo');
 
-comlyInstance().addCommand(fooCommand).run();
+comly().addCommand(fooCommand).run();
 ```
 
 Setup TS compiler & CLI bin
