@@ -7,8 +7,8 @@
 Command Line Interface Framework.  
 *(Based on [commander](https://www.npmjs.com/package/commander))*
 
-Features:
-- CLI app runner
+### Features:
+- Logger & verbosity by default
 - CLI bin setup
 
 # Quick Start

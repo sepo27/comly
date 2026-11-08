@@ -1,9 +1,15 @@
 import js from "@eslint/js";
 import tseslint from "@typescript-eslint/parser";
+import tsPlugin from "@typescript-eslint/eslint-plugin";
 import globals from "globals";
 
 export default [
   js.configs.recommended,
+  {
+    plugins: {
+      "@typescript-eslint": tsPlugin,
+    },
+  },
   {
     files: ["**/*.ts"],
     languageOptions: {
@@ -14,6 +20,7 @@ export default [
     },
     rules: {
       // Style — minimalistic, Airbnb-inspired
+      "@typescript-eslint/no-unused-vars": ["error", { vars: "all", args: "after-used", argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
       "no-var": "error",
       "prefer-const": "error",
       "no-unused-vars": "off",
