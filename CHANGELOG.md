@@ -1,3 +1,7 @@
+## <small>0.6.3 (2026-11-08)</small>
+
+* chore: Fix back imports from .js to ts ([4cee1ee](https://github.com/sepo27/comly/commit/4cee1ee))
+
 ## <small>0.6.2 (2026-11-08)</small>
 
 * chore: Fix imports from .js to .ts ([284b71c](https://github.com/sepo27/comly/commit/284b71c))
