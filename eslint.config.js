@@ -61,7 +61,7 @@ export default [
       "no-dupe-keys": "error",
       "no-duplicate-imports": "error",
       "prefer-spread": "error",
-      "prefer-destructuring": ["error", { object: true, array: false }],
+      "prefer-destructuring": "off",
       "radix": "error",
       "no-fallthrough": "error",
       "no-case-declarations": "error",
