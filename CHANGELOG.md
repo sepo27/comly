@@ -1,3 +1,7 @@
+## <small>0.6.2 (2026-11-08)</small>
+
+* chore: Fix imports from .js to .ts ([284b71c](https://github.com/sepo27/comly/commit/284b71c))
+
 ## <small>0.6.1 (2026-11-08)</small>
 
 * Fix sub-commands options problem ([49ea0ca](https://github.com/sepo27/comly/commit/49ea0ca))
