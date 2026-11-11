@@ -8,15 +8,16 @@ Command Line Interface Framework.
 *(Based on [commander](https://www.npmjs.com/package/commander))*
 
 ### Features:
-- Logger & verbosity by default
-- Debuggable pretty errors
+- Logger & verbosity
+- Debuggable errors
 - Handy CLI kit
   - Common options
-- CLI bin setup
+- CLI bin compilation kit
+  - compile app into distributable bin file (javascript)
 
 # Quick Start
 
-Install (TODO: publish)
+Install (TODO: publish package)
 ```shell
 pnpm install <local-path-to-comly>
 ```
@@ -32,11 +33,10 @@ const fooCommand = ComlyCommand('foo');
 comly().addCommand(fooCommand).run();
 ```
 
-Setup TS compiler & CLI bin
+Make distributable bin file
 ```shell
-pnpm install typescript -D
+# Install peers ...
 
-# Configure tsconfig.json to output into ./dist
-
-pnpm comly # This will setup comly bin into ./cli
+# Make fine file
+pnpm comly bin make -h
 ```
