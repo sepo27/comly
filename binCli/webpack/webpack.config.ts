@@ -30,10 +30,16 @@ export default (env: Env): Configuration => ({
     outputModule: true,
   },
 
-  // externalsType: 'module',
-  // externals: [
-  //   /^(node:)?[a-z]/,
-  // ],
+  externalsType: 'module',
+  externals: [
+    /^(node:)?[a-z]/,
+    /^commander/,
+    // /^ajv(\/.*)?$/,
+    /^webpack(\/.*)?$/,
+    /^schema-utils(\/.*)?$/,
+    /^webpack-sources(\/.*)?$/,
+    /^webpack-shebang-plugin(\/.*)?$/,
+  ],
 
   resolve: {
     extensions: ['.ts'],
@@ -47,7 +53,7 @@ export default (env: Env): Configuration => ({
       {
         test: /\.tsx?$/,
         loader: 'ts-loader',
-        // exclude: /node_modules/,
+        exclude: /node_modules/,
       },
     ],
   },
