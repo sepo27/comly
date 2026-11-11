@@ -22,6 +22,7 @@ export async function makeComlyBinFile(this: ThisContext, args: Params): Promise
 
   await runWebpack(webpackConfig).then((stats: Stats) => {
     this.log.log('Compiled in: %dms', stats?.toJson().time);
+    writeCommonjsPackageJson(path.dirname(args.distFilepath));
   });
 }
 
@@ -53,7 +54,7 @@ interface StatsDebug {
 }
 
 function makeWebpackStatsDebug(stats: Stats): StatsDebug {
-  const errors = stats.toJson().errors?.slice(1, 3);
+  const errors = stats.toJson().errors?.slice(0, 3);
   return {
     errors: (errors ?? []).map(({ moduleName, message }: StatsError) => ({
       moduleName: moduleName ?? '',
@@ -85,7 +86,7 @@ function resolveEntryFilepath(sourcePath: string): string {
 
   if (fs.existsSync(sourcePath) && fs.statSync(sourcePath).isDirectory()) {
     // Default to index entry point
-    entryFilepath = path.join(sourcePath, 'index.tx');
+    entryFilepath = path.join(sourcePath, 'index.ts');
   }
 
   if (fs.existsSync(entryFilepath)) {
@@ -93,4 +94,11 @@ function resolveEntryFilepath(sourcePath: string): string {
   }
 
   throw new Error(`Unable to resolve entry file path: ${entryFilepath}`);
+}
+
+function writeCommonjsPackageJson(distDir: string): void {
+  const packageJsonPath = path.join(distDir, 'package.json');
+  if (!fs.existsSync(packageJsonPath)) {
+    fs.writeFileSync(packageJsonPath, JSON.stringify({ type: 'commonjs' }));
+  }
 }
