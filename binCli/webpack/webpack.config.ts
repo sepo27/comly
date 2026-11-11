@@ -1,5 +1,4 @@
-import { Configuration } from 'webpack';
-import WebpackShebangPlugin from 'webpack-shebang-plugin';
+import webpack, { Configuration } from 'webpack';
 
 interface Env {
   entryPath: string
@@ -7,15 +6,12 @@ interface Env {
   outputFilename: string
 }
 
-// const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
 export default (env: Env): Configuration => ({
   mode: 'production' as 'production',
   target: 'node',
 
   entry: {
     main: env.entryPath,
-    // main: "./src/index.ts",
   },
 
   output: {
@@ -59,12 +55,11 @@ export default (env: Env): Configuration => ({
   },
 
   plugins: [
-    new WebpackShebangPlugin(),
-    // new webpack.DefinePlugin({
-    //   "process.env.OBIT_BUILD_META": JSON.stringify({
-    //     isLocalRepo: env.isLocalRepo === 'true',
-    //     branch: env.branch,
-    //   }),
-    // }),
+    new webpack.BannerPlugin({
+      banner: '#!/usr/bin/env node',
+      raw: true,
+      entryOnly: true,
+      stage: webpack.Compilation.PROCESS_ASSETS_STAGE_REPORT,
+    }),
   ],
 });

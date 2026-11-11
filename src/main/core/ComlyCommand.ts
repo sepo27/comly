@@ -3,7 +3,7 @@ import { Nodelog } from '../../lib/Nodelog.js';
 import { VerboseOption } from '../opts/VerboseOption.js';
 import { CommandAction } from '../types.js';
 import { ComlyCommandOpts } from './types.js';
-import { ComlyDebuggableError } from './ComlyDebuggableError.js';
+import { DebuggableError } from './DebuggableError.js';
 
 export class ComlyCommand extends Command {
   constructor(name?: string) {
@@ -48,8 +48,8 @@ function makeActionWrap(action: CommandAction<typeof this>): CommandAction<Comly
       this.log.error(err.message);
       this.log.debug(err.stack);
 
-      if (err instanceof ComlyDebuggableError && err.debug) {
-        this.log.debug(`${ComlyDebuggableError.name}: Debug`, err.debug);
+      if (err instanceof DebuggableError && err.debug) {
+        this.log.debug(`${DebuggableError.name}: Debug`, err.debug);
       }
     }
   }

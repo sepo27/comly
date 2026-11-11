@@ -5,15 +5,17 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": "./binCli/dist/bin/comly.js",
   "scripts": {
     "build": "tsc -p ./tsconfig.build.json",
     "lint": "eslint ./src",
     "typecheck": "tsc --noEmit",
-    "bin-cli:Lint": "eslint ./binCli/src -c ./eslint.config.js",
+    "bin-cli:lint": "eslint ./binCli/src -c ./eslint.config.js",
     "bin-cli:typecheck": "tsc --noEmit",
+    "bin-cli:build": "pnpm bin-cli bin make -s ./binCli/src -d ./binCli/dist/bin/comly.js -v",
     "bin-cli": "tsx ./binCli/src",
 
-    "prepare": "husky && pnpm run build",
+    "prepare": "husky && pnpm build && pnpm bin-cli:build",
     "version": "conventional-changelog -i CHANGELOG.md -s -n .versionrc.js && git add CHANGELOG.md"
   },
   "files": [
@@ -35,10 +37,19 @@
   "author": "Sergey Poskachey",
   "license": "ISC",
   "dependencies": {
-    "ajv": "^8.20.0"
+    "commander": "^15.0.0"
   },
   "peerDependencies": {
-    "commander": "^15.0.0"
+    "webpack": "^5.112.2",
+    "ts-loader": "^9.6.2"
+  },
+  "peerDependenciesMeta": {
+    "webpack": {
+      "optional": true
+    },
+    "ts-loader": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -50,10 +61,7 @@
     "eslint": "^10.14.0",
     "globals": "^16.0.0",
     "husky": "^9.0.0",
-    "ts-loader": "^9.6.2",
     "tsx": "^4.23.15",
-    "typescript": "^5.8.2",
-    "webpack": "^5.112.2",
-    "webpack-shebang-plugin": "^1.1.8"
+    "typescript": "^5.8.2"
   }
 }

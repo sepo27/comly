@@ -3,7 +3,7 @@ import * as path from 'node:path';
 import webpack, { Configuration, Stats, StatsError } from 'webpack';
 import { Nodelog } from '../../../../../src/lib/Nodelog.js';
 import webpackConfig from '../../../../webpack/webpack.config.js';
-import { ComlyDebuggableError } from '../../../../../src/main/core/ComlyDebuggableError.js';
+import { DebuggableError } from '../../../../../src/index.js';
 
 interface ThisContext {
   log: Nodelog
@@ -17,19 +17,26 @@ interface Params {
 
 export async function makeComlyBinFile(this: ThisContext, args: Params): Promise<void> {
   const webpackConfig = resolveWebpackConfig(args);
+
   this.log.log('Compiling bin file ...');
   this.log.log('From %s -> %s', args.sourcePath, args.distFilepath);
 
+  // Compile
   await runWebpack(webpackConfig).then((stats: Stats) => {
     this.log.log('Compiled in: %dms', stats?.toJson().time);
   });
+
+  // Make dist bin file executable
+  await fs.promises.chmod(args.distFilepath, 0o755);
+
+  this.log.log('Made bin file executable');
 }
 
 /*** Private ***/
 
-function runWebpack(conifg: Configuration): Promise<Stats> {
+function runWebpack(config: Configuration): Promise<Stats> {
   return new Promise<Stats>((resolve, reject) => {
-    webpack(conifg, (err, stats) => {
+    webpack(config, (err, stats) => {
       if (err) {
         reject(err);
       }
@@ -37,7 +44,8 @@ function runWebpack(conifg: Configuration): Promise<Stats> {
       // console.log('=== stats', stats?.hasErrors(), stats?.toJson().errors?.slice(0, 1));
 
       if (stats?.hasErrors()) {
-        reject(new ComlyDebuggableError('Compilation failed', makeWebpackStatsDebug(stats)));
+        // console.log('=== stats', stats.toJson());
+        reject(new DebuggableError('Compilation failed', makeWebpackStatsDebug(stats)));
       }
 
       resolve(stats as Stats);
@@ -53,7 +61,7 @@ interface StatsDebug {
 }
 
 function makeWebpackStatsDebug(stats: Stats): StatsDebug {
-  const errors = stats.toJson().errors?.slice(1, 3);
+  const errors = stats.toJson().errors;
   return {
     errors: (errors ?? []).map(({ moduleName, message }: StatsError) => ({
       moduleName: moduleName ?? '',
@@ -63,17 +71,12 @@ function makeWebpackStatsDebug(stats: Stats): StatsDebug {
 }
 
 function resolveWebpackConfig(args: Params): Configuration {
-  return webpackConfig(resolveWebpackConfigPaths(args));
+  return webpackConfig(resolveWebpackConfigEnvArgs(args));
 }
 
-function resolveWebpackConfigPaths(args: Params) {
+function resolveWebpackConfigEnvArgs(args: Params) {
   const { sourcePath, distFilepath } = args;
   const entryPath = resolveEntryFilepath(sourcePath);
-
-  // if (!fs.existsSync(distFilepath) || !fs.statSync(distFilepath).isFile()) {
-  //   throw new Error(`Dist file path is invalid: ${distFilepath}`);
-  // }
-
   const outputPath = path.dirname(distFilepath),
     outputFilename = path.basename(distFilepath);
 

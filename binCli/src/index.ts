@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { comly } from '../../src/index.js';

@@ -57,7 +57,7 @@ fi
 
 if [[ `grepBinCliFiles "tsx?"` ]]; then
   infom "Linting bin CLI ... "
-  pnpm run --silent bin-cli:Lint --quiet `grepBinCliFiles "ts"` || exit 1
+  pnpm run --silent bin-cli:lint --quiet `grepBinCliFiles "ts"` || exit 1
   println "🮱"
 fi
 
