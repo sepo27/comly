@@ -1,3 +1,11 @@
+## 0.7.0 (2026-11-14)
+
+* feat(bin-cli): Implement make bin command ([289c83f](https://github.com/sepo27/comly/commit/289c83f))
+* feat(bin-cli): Drop config option and try to compile to nodenext ([92698c3](https://github.com/sepo27/comly/commit/92698c3))
+* feat(bin-cli): Implement make bin command ([c6921b7](https://github.com/sepo27/comly/commit/c6921b7))
+* chore(bin-cli): Setup ([d5290a6](https://github.com/sepo27/comly/commit/d5290a6))
+* chore(bin-cli): Drop /bin ([1c61fce](https://github.com/sepo27/comly/commit/1c61fce))
+
 ## <small>0.6.3 (2026-11-08)</small>
 
 * chore: Fix back imports from .js to ts ([4cee1ee](https://github.com/sepo27/comly/commit/4cee1ee))
