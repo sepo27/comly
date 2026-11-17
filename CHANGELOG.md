@@ -1,3 +1,7 @@
+## <small>0.7.6 (2026-11-17)</small>
+
+* doc: Update README ([49bd019](https://github.com/sepo27/comly/commit/49bd019))
+
 ## <small>0.7.5 (2026-11-17)</small>
 
 * chore: Update package name ([f4b6788](https://github.com/sepo27/comly/commit/f4b6788))
