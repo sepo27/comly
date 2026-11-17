@@ -1,5 +1,5 @@
-import { InvalidOptionArgumentError, Option } from 'commander';
 import fs from 'node:fs';
+import { InvalidOptionArgumentError, Option } from 'commander';
 
 export interface PathOptionParsed {
   path: string

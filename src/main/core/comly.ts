@@ -1,6 +1,6 @@
-import { Command } from 'commander';
 import { styleText } from 'node:util';
 import * as process from 'node:process';
+import { Command } from 'commander';
 
 export const comly = (): ComlyRootCommand => new ComlyRootCommand()
   .name(styleText(['bold'], './cli'))

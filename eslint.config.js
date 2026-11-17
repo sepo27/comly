@@ -1,6 +1,7 @@
 import js from "@eslint/js";
 import tseslint from "@typescript-eslint/parser";
 import tsPlugin from "@typescript-eslint/eslint-plugin";
+import perfectionist from "eslint-plugin-perfectionist";
 import globals from "globals";
 
 export default [
@@ -8,6 +9,7 @@ export default [
   {
     plugins: {
       "@typescript-eslint": tsPlugin,
+      "perfectionist": perfectionist,
     },
   },
   {
@@ -79,6 +81,12 @@ export default [
       "no-constant-binary-expression": "error",
       "no-constructor-return": "error",
       "no-import-assign": "error",
+      "perfectionist/sort-imports": ["error", {
+        "type": "unsorted",
+        "order": "asc",
+        "groups": ["builtin", "external", ["parent", "sibling", "index"]],
+        "newlinesBetween": 0,
+      }],
     },
   },
   {

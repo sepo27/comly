@@ -1,5 +1,5 @@
-import { InvalidOptionArgumentError, Option } from 'commander';
 import fs from 'node:fs';
+import { InvalidOptionArgumentError, Option } from 'commander';
 
 export class FileOption extends Option {
   constructor(flags: string, description?: string) {

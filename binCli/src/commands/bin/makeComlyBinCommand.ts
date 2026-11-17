@@ -1,7 +1,7 @@
-import { ComlyCommand, ComlyCommandOpts, PathOptionParsed } from '../../../../src/index.js';
-import { BinCliSourcePathOption } from '../../opts/BinCliSourcePathOption.js';
 import fs from 'node:fs';
 import path from 'node:path';
+import { ComlyCommand, ComlyCommandOpts, PathOptionParsed } from '../../../../src/index.js';
+import { BinCliSourcePathOption } from '../../opts/BinCliSourcePathOption.js';
 import { makeComlyBinFile } from './functions/makeComlyBinFile.js';
 
 interface Opts extends ComlyCommandOpts {
