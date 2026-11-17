@@ -1,3 +1,7 @@
+## <small>0.7.2 (2026-11-17)</small>
+
+* chore: Enforce lint rule to sort imports by groups ([f2265a0](https://github.com/sepo27/comly/commit/f2265a0))
+
 ## <small>0.7.1 (2026-11-17)</small>
 
 * feat: Show help without error with no args by default ([ec547e2](https://github.com/sepo27/comly/commit/ec547e2))
