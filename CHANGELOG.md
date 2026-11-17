@@ -1,3 +1,7 @@
+## <small>0.7.1 (2026-11-17)</small>
+
+* feat: Show help without error with no args by default ([ec547e2](https://github.com/sepo27/comly/commit/ec547e2))
+
 ## 0.7.0 (2026-11-14)
 
 * feat(bin-cli): Implement make bin command ([289c83f](https://github.com/sepo27/comly/commit/289c83f))
