@@ -1,3 +1,7 @@
+## <small>0.7.4 (2026-11-17)</small>
+
+* chore: Rename build* scripts to make* ([8c82bc9](https://github.com/sepo27/comly/commit/8c82bc9))
+
 ## <small>0.7.3 (2026-11-17)</small>
 
 * chore: Fix lint duplicate imports error ([b914b99](https://github.com/sepo27/comly/commit/b914b99))
