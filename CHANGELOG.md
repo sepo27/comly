@@ -1,3 +1,7 @@
+## <small>0.7.3 (2026-11-17)</small>
+
+* chore: Fix lint duplicate imports error ([b914b99](https://github.com/sepo27/comly/commit/b914b99))
+
 ## <small>0.7.2 (2026-11-17)</small>
 
 * chore: Enforce lint rule to sort imports by groups ([f2265a0](https://github.com/sepo27/comly/commit/f2265a0))
