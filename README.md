@@ -11,15 +11,15 @@ Command Line Interface Framework.
 - Logger & verbosity
 - Debuggable errors
 - Handy CLI kit
-  - Common options
+  - Common options for commands
 - CLI bin compilation kit
   - compile app into distributable bin file (javascript)
 
 # Quick Start
 
-Install (TODO: publish package)
+Install
 ```shell
-pnpm install <local-path-to-comly>
+pnpm install @sepo27/comly
 ```
 
 Setup CLI app
@@ -28,15 +28,16 @@ Setup CLI app
 
 import { comly, ComlyCommand } from 'comly';
 
+// ComlyCommand is a wrapper over commander.Command; so use its API normaly
 const fooCommand = ComlyCommand('foo');
 
 comly().addCommand(fooCommand).run();
 ```
 
-Make distributable bin file
+Make distributable bin file of your CLI app
 ```shell
-# Install peers ...
+# Install peers (from comly package.json)
 
-# Make fine file
+# Make bin file
 pnpm comly bin make -h
 ```
