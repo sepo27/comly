@@ -7,15 +7,15 @@
   "types": "./dist/index.d.ts",
   "bin": "./binCli/dist/bin/comly.js",
   "scripts": {
-    "build": "tsc -p ./tsconfig.build.json",
+    "make": "tsc -p ./tsconfig.build.json",
     "lint": "eslint ./src",
     "typecheck": "tsc --noEmit",
     "bin-cli:lint": "eslint ./binCli/src -c ./eslint.config.js",
     "bin-cli:typecheck": "tsc --noEmit",
-    "bin-cli:build": "pnpm bin-cli bin make -s ./binCli/src -d ./binCli/dist/bin/comly.js -v",
+    "bin-cli:make": "pnpm bin-cli bin make -s ./binCli/src -d ./binCli/dist/bin/comly.js -v",
     "bin-cli": "tsx ./binCli/src",
 
-    "prepare": "husky && pnpm build && pnpm bin-cli:build",
+    "prepare": "husky && pnpm make && pnpm bin-cli:make",
     "version": "conventional-changelog -i CHANGELOG.md -s -n .versionrc.js && git add CHANGELOG.md"
   },
   "files": [
