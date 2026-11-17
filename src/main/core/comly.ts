@@ -1,5 +1,6 @@
 import { Command } from 'commander';
 import { styleText } from 'node:util';
+import * as process from 'node:process';
 
 export const comly = (): ComlyRootCommand => new ComlyRootCommand()
   .name(styleText(['bold'], './cli'))
@@ -13,6 +14,9 @@ export const comly = (): ComlyRootCommand => new ComlyRootCommand()
  */
 class ComlyRootCommand extends Command {
   public run() {
+    if (process.argv.length < 3) {
+      this.help();
+    }
     this.parse(process.argv);
   }
 }
